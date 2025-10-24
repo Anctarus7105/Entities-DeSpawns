@@ -1,0 +1,41 @@
+--DeSpawnVoidNoises
+
+-- getting SoundService
+local SoundService = game:GetService("SoundService")
+
+-- creating sound
+local sound = Instance.new("Sound")
+sound.Name = "LoopedSound"
+sound.SoundId = "rbxassetid://1837403780" -- u id of sound here
+sound.Volume = 0.8
+sound.Parent = SoundService
+
+-- starting play sound
+sound:Play()
+
+-- when gone – start again
+sound.Ended:Connect(function()
+    sound:Destroy()
+end)
+--
+--
+--DeSpawnBreathing
+
+-- getting SoundService
+local SoundService = game:GetService("SoundService")
+
+-- creating sound
+local sound = Instance.new("Sound")
+sound.Name = "LoopedSound"
+sound.SoundId = "rbxassetid://8258601891" -- u id of sound here
+sound.Volume = 1.2
+sound.Parent = SoundService
+
+-- starting play sound
+sound:Play()
+
+-- when gone – not start again
+sound.Ended:Connect(function()
+    sound:Destroy()
+end)
+--
